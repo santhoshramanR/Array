@@ -8,15 +8,20 @@ def rotateArray(a, d):
             temp.append(a[i])
     i = 0
     for i in range(0, d):
-        if d >= 8:
-            return a[(1):]
-
-        else:
-            temp.append(a[i])
-    a = temp.copy()
+        temp = a[0]
+        for j in range(0, len(a) - 1):
+            a[j] = a[j + 1]
+        a[len(a) - 1] = temp
     return a
 arr = [1, 2, 3, 4, 5, 6, 7]
 print("Array after left rotation is: ", end=' ')
-#TestCase
-print(rotateArray(arr, 2)) # Shifting places by 2 index 
-print(rotateArray(arr, -7))# Negative index 
+print (rotateArray(arr, 2 # printing just 1 line of result
+for k in range(-20, 20):
+    print(rotateArray(arr, k))
+
+#Condition 1 : if arr = [1, 2, 3, 4, 5, 6, 7] d = -1 Result == NONE ##Negative values for the positions to rotate will throw an error "NONE"
+#Condition 2 : if arr = [1, 2, 3, 4, 5, 6, 7] d = 0  Result == No change in index becase the shift is 0 so the arr returns arr =  [1, 2, 3, 4, 5, 6, 7]
+#Condition 3 : if arr = [1, 2, 3, 4, 5, 6, 7] d in the range between ( -20 to 20 from line 19, and line 20)
+#Condition 4 : if arr = [1, 2, 3, -4,5, -6, 7] d = 2 results : [1, 2, 3, -4, 5, -6, 7]
+#Condition 5 : if arr = ["a", "b", "c", "d", "e"] d = 2 Array after left rotation is:  ['c', 'd', 'e', 'a', 'b']  
+#Condition 6 : if arr = ["a", "b", "c", "d", "e"] d = -2 or negative d then the result is "NONE"
