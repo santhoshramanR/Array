@@ -15,7 +15,7 @@ def rotateArray(a, d):
     return a
 arr = [1, 2, 3, 4, 5, 6, 7]
 print("Array after left rotation is: ", end=' ')
-print (rotateArray(arr, 2 # printing just 1 line of result
+print (rotateArray(arr, 2)) # printing just 1 line of result
 for k in range(-20, 20):
     print(rotateArray(arr, k))
 
